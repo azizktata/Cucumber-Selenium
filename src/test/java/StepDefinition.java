@@ -27,8 +27,9 @@ public class StepDefinition {
         firefoxBinary.addCommandLineOptions("--no-sandbox");
         System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setBinary(firefoxBinary);
         driver = new FirefoxDriver(firefoxOptions);
-        driver.get("https://www.google.fr");
+        driver.get("https://www.google.fr/");
     }
     @When("I lookup the word {string}")
     public void i_lookup_the_word(String string) {
