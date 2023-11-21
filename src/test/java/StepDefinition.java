@@ -34,7 +34,7 @@ public class StepDefinition {
     public void i_lookup_the_word(String string) {
         driver.findElement(By.name("q")).clear();
         driver.findElement(By.name("q")).sendKeys(string);
-        driver.findElement(By.name("btnk")).click();
+        driver.findElement(By.name("btnK")).click();
 
     }
     @Then("Search results display the word {string}")
